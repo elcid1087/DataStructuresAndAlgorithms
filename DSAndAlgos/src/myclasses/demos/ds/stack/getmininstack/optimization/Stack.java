@@ -1,4 +1,4 @@
-package myclasses.demos.ds.stack.getmininstack;
+package myclasses.demos.ds.stack.getmininstack.optimization;
 
 /**
  * The Class Stack.
@@ -67,8 +67,7 @@ public class Stack {
 	 *            the i value Checks if the stack is full if not inserts the
 	 *            item in the stack.
 	 */
-	public void push(int iValue) {
-		
+	public void pushSuper(int iValue) {
 			stackArray[++top] = iValue;
 			System.out.println("successfully inserted: " + iValue);
 	}
@@ -79,8 +78,9 @@ public class Stack {
 	/**
 	 * Pop. Checks if the stack is empty if not pops the item from the stack.
 	 */
-	public void pop() {
+	public int popSuper() {
 			int out = stackArray[top--];
 			System.out.println("Popped value: " + out);
+			return out;
 	}
 }

@@ -1,4 +1,4 @@
-package myclasses.demos.ds.stack.getmininstack;
+package myclasses.demos.ds.stack.getmininstack.optimization;
 
 public class SpecialStack extends Stack {
 	private int[] minStackArray;
@@ -15,16 +15,14 @@ public class SpecialStack extends Stack {
 		if (isFull()) {
 			System.out.println("Stack is Full");
 		} else {
-			super.push(iValue);
+			super.pushSuper(iValue);
 			if (isMinStackEmpty()) {
 				minStackArray[++minTop] = iValue;
 			} else {
 				int minPeakValue = minPeak();
 				if (iValue < minPeakValue) {
 					minStackArray[++minTop] = iValue;
-				} else {
-					minStackArray[++minTop] = minPeakValue;
-				}
+				} 
 			}
 
 		}
@@ -35,8 +33,10 @@ public class SpecialStack extends Stack {
 		if (isEmpty()) {
 			System.out.println("Stack is empty");
 		} else {
-			super.pop();
+			int out = super.popSuper();
+			if(out == getMin()){
 			minTop--;
+			}
 		}
 	}
 

@@ -1,10 +1,12 @@
-package myclasses.demos.ds.stack.getmininstack;
+package myclasses.demos.ds.stack.getmininstack.optimization;
 
 public class SpecialStackApp {
 	public static void main(String[] args) {
 		System.out
-				.println("This example is for getting minimum value in the stack with time complexity of order 1 O(1) and needs an extra stack to " +
-						"store the minimum values which takes twice the memory ");
+				.println("This example is for getting minimum value in the stack with time complexity of order 1 O(1) "
+						+ "and reducing the duplicate minimum values that are being stored in the min stack. This is done by checking " +
+						"this condition where if the new value is smaller that the already available min value then " +
+						"push into the min stack else do nothing, this way if the new value is min of all the elements then we push into the min stack.");
 		System.out
 				.println("***********************************************************");
 		SpecialStack specialStack = new SpecialStack(5);
@@ -19,7 +21,7 @@ public class SpecialStackApp {
 		specialStack.pop();
 		System.out.println("Min Value after 1 element pop: "
 				+ specialStack.getMin());
-		specialStack.push(1);
+		specialStack.pushSuper(1);
 		System.out.println("Min Value after pushing 1: "
 				+ specialStack.getMin());
 		specialStack.pop();
