@@ -1,10 +1,23 @@
 package myclasses.demos.ds.stack.getmininstack;
 
+// TODO: Auto-generated Javadoc
+/**
+ * How would you design a stack which, in addition to push and pop, also has a
+ * function min which returns the minimum element? Push, pop and min should all
+ * operate in 0(1) time.
+ */
 public class SpecialStackApp {
+
+	/**
+	 * The main method.
+	 * 
+	 * @param args
+	 *            the arguments
+	 */
 	public static void main(String[] args) {
 		System.out
-				.println("This example is for getting minimum value in the stack with time complexity of order 1 O(1) and needs an extra stack to " +
-						"store the minimum values which takes twice the memory ");
+				.println("This example is for getting minimum value in the stack with time complexity of order 1 O(1) and needs an extra stack to "
+						+ "store the minimum values which takes twice the memory ");
 		System.out
 				.println("***********************************************************");
 		SpecialStack specialStack = new SpecialStack(5);
