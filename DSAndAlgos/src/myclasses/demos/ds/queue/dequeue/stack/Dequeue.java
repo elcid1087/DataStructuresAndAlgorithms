@@ -15,6 +15,14 @@ public class Dequeue {
 
 	}
 
+	public int peek() {
+		if (!isEmpty()) {
+			return dequeueArray[front];
+		}
+		return 0;
+
+	}
+
 	public boolean isEmpty() {
 		return (rear == -1 && front == -1) || (rear < front);
 	}
@@ -28,16 +36,16 @@ public class Dequeue {
 		if (front == -1) {
 			dequeueArray[++front] = iValue;
 			rear++;
-//			System.out.println("Inserted: " + dequeueArray[front]);
+			// System.out.println("Inserted: " + dequeueArray[front]);
 		} else if (front > 0) {
 			dequeueArray[--front] = iValue;
-//			System.out.println("Inserted: " + dequeueArray[front]);
+			// System.out.println("Inserted: " + dequeueArray[front]);
 		} else if (!isFull()) {
 			// Move the elements in the array.
 			moveElementsForward(front, rear);
 			dequeueArray[front] = iValue;
 			rear++;
-//			System.out.println("Inserted: " + dequeueArray[front]);
+			// System.out.println("Inserted: " + dequeueArray[front]);
 		} else {
 			System.out.println("Queue is full");
 		}
@@ -62,7 +70,7 @@ public class Dequeue {
 			if (rear == maxSize - 1) {
 				// Move the elements
 				moveELementsBackward(front, rear);
-				front--;	
+				front--;
 			} else {
 				rear++;
 			}
@@ -91,7 +99,9 @@ public class Dequeue {
 
 	public void removeFirst() {
 		if (!isEmpty()) {
-
+			if (front == maxSize || front == -1) {
+				front = 0;
+			}
 			System.out.println("Removed Elem at first: "
 					+ dequeueArray[front++]);
 		}
@@ -111,6 +121,6 @@ public class Dequeue {
 				System.out.print(dequeueArray[i] + " ");
 			}
 		}
-System.out.println(" ");
+		System.out.println(" ");
 	}
 }

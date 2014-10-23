@@ -28,6 +28,8 @@ public static void main(String[] args) {
 	dequeue.display();
 	dequeue.insertLast(3);
 	dequeue.display();
+	dequeue.removeFirst();
+	dequeue.display();
 //	dequeue.removeLast();
 	/*dequeue.display();
 	dequeue.removeFirst();
