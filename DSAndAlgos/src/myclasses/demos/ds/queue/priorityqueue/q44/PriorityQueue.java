@@ -1,6 +1,8 @@
-package myclasses.demos.ds.queue.priorityqueue;
+package myclasses.demos.ds.queue.priorityqueue.q44;
 
-// TODO: Auto-generated Javadoc
+// TODO: DO WITHOUT USING REAR AND FRONT
+//?????????????
+
 /**
  * The Class PriorityQueue.
  */
@@ -41,7 +43,7 @@ public class PriorityQueue {
 	 * @return true, if is empty
 	 */
 	public boolean isEmpty() {
-		return (rear == -1 && front == 0) || (front > rear);
+		return (nElem == 0);
 	}
 
 	/**
@@ -50,7 +52,7 @@ public class PriorityQueue {
 	 * @return true, if is full
 	 */
 	public boolean isFull() {
-		return nElem == maxSize - 1;
+		return nElem == maxSize;
 	}
 
 	/**
@@ -64,44 +66,9 @@ public class PriorityQueue {
 			if (rear == maxSize - 1) {
 				rear = -1;
 			}
-			if (rear == -1) {
-				priorityQueueArray[++rear] = iValue;
-				System.out.println("Inserted: " + priorityQueueArray[rear]);
-			} else if (rear == 0 && iValue > priorityQueueArray[rear]) {
-				shift(front, rear);
-				priorityQueueArray[front] = iValue;
-				System.out.println("Inserted: " + priorityQueueArray[rear]);
-			} else if (iValue < priorityQueueArray[rear]) {
-				priorityQueueArray[++rear] = iValue;
-				System.out.println("Inserted: " + priorityQueueArray[rear]);
-			} else {
-				for (int iRear = rear; iRear >= front; iRear--) {
-					if (iValue < priorityQueueArray[iRear]) {
-						shift(iRear, rear);
-						priorityQueueArray[iRear + 1] = iValue;
-						System.out.println("Inserted: "
-								+ priorityQueueArray[iRear + 1]);
-						break;
-					}
-				}
-
-			}
+			priorityQueueArray[++rear] = iValue;
+			nElem++;
 		}
-	}
-
-	/**
-	 * Shift.
-	 * 
-	 * @param front2
-	 *            the front2
-	 * @param rear2
-	 *            the rear2
-	 */
-	private void shift(int front2, int rear2) {
-		for (int i = rear2; i >= front2; i--) {
-			priorityQueueArray[i + 1] = priorityQueueArray[i];
-		}
-		rear++;
 	}
 
 	/**
@@ -111,6 +78,22 @@ public class PriorityQueue {
 		if (!isEmpty()) {
 			if (front == maxSize) {
 				front = 0;
+			}
+			if (front != rear) {
+				int temp = priorityQueueArray[front];
+				for (int i = front; i != rear; i++) {
+					if (i == maxSize - 1) {
+						i = -1;
+					}
+					if (temp < priorityQueueArray[i + 1]) {
+						// Swap
+
+						priorityQueueArray[front] = priorityQueueArray[i + 1];
+						priorityQueueArray[i + 1] = temp;
+						temp = priorityQueueArray[front];
+
+					}
+				}
 			}
 			System.out.println("Removed elem: " + priorityQueueArray[front++]);
 			nElem--;
@@ -122,6 +105,7 @@ public class PriorityQueue {
 	 */
 	public void display() {
 		System.out.print("Priority Queue First --> Last: ");
+
 		int i = front;
 		do {
 			if (i == maxSize) {

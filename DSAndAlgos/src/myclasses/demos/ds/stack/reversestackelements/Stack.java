@@ -1,15 +1,16 @@
 package myclasses.demos.ds.stack.reversestackelements;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class Stack.
  */
 public class Stack {
 
 	/** The stack array. */
-	private int[] stackArray;
+	private final int[] stackArray;
 
 	/** The size. */
-	private int size;
+	private final int size;
 
 	/** The top. */
 	private int top;
@@ -67,12 +68,14 @@ public class Stack {
 			System.out.println("Stack is full");
 		} else {
 			stackArray[++top] = iValue;
-//			System.out.println("successfully inserted: " + iValue);
+			// System.out.println("successfully inserted: " + iValue);
 		}
 	}
 
 	/**
 	 * Pop. Checks if the stack is empty if not pops the item from the stack.
+	 * 
+	 * @return the int
 	 */
 	public int pop() {
 		if (isEmpty()) {
@@ -80,20 +83,22 @@ public class Stack {
 			return 0;
 		} else {
 			int out = stackArray[top--];
-//			System.out.println("Popped value: " + out);
+			// System.out.println("Popped value: " + out);
 			return out;
 		}
 	}
-	
-	
-	public void displayStack(){
+
+	/**
+	 * Display stack.
+	 */
+	public void displayStack() {
 		System.out.print("Stack: First --> Last: ");
-		if(!isEmpty()){
-			for(int i=0;i<=top;i++){
-				System.out.print(stackArray[i]+" ");
+		if (!isEmpty()) {
+			for (int i = 0; i <= top; i++) {
+				System.out.print(stackArray[i] + " ");
 			}
 			System.out.println(" ");
 		}
 	}
-	
+
 }
