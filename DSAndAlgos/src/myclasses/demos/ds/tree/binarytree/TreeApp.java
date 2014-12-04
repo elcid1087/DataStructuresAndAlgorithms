@@ -1,0 +1,114 @@
+package myclasses.demos.ds.tree.binarytree;
+
+public class TreeApp {
+	public static void main(String[] args) {
+		Tree tree = new Tree();
+/*//		int level[] = {80, 72, 81, 68, 82, 73, 83, 66, 84, 74 ,85 ,69 ,86 ,75 ,87 ,65 ,88 ,76 ,89 ,70 ,90 ,77 ,67 ,78 ,71 ,79};
+		int level[] = {20, 8, 22, 4, 12, 10, 14};
+		int in[] = {4, 8, 10, 12, 14, 20, 22};
+		for(int i=0;i<level.length;i++){
+			tree.insert(level[i]);
+		}
+		tree.display();
+		tree.inorder(tree.parent);
+		tree.constructBST(new Node(20), level, in,0,level.length);*/
+		/*tree.insert(63);
+		tree.insert(27);
+		tree.insert(80);
+		tree.insert(13);
+		tree.insert(51);
+		tree.insert(70);
+		tree.insert(92);
+		tree.find(92);
+		tree.find(100);
+		tree.find(51);
+		tree.inorder(tree.parent);
+		System.out.println(" ");
+		int min = tree.findMin();
+		System.out.println("Min: " + min);
+		int max = tree.findMax();
+		System.out.println("Max: "+ max);
+		tree.delete(13);
+		tree.delete(51);
+		tree.delete(70);
+		tree.delete(92);
+		tree.delete(93);
+		tree.delete(27);
+		tree.delete(80);
+		tree.inorder(tree.parent);
+		tree.delete(63);
+		tree.inorder(tree.parent);
+		tree.insert(63);
+		tree.insert(27);
+		tree.insert(80);
+		tree.insert(13);
+		tree.insert(51);
+		tree.insert(70);
+		tree.insert(92);
+		tree.insert(8);
+		tree.insert(9);
+		tree.insert(95);
+		tree.insert(91);
+		tree.insert(83);
+		tree.insert(65);
+		tree.insert(68);
+		tree.insert(45);
+		tree.insert(43);
+		tree.insert(69);
+		System.out.println("Insert Back");
+		tree.display(); 
+		tree.inorder(tree.parent);
+		System.out.println("");
+		tree.delete(13);
+		tree.delete(51);
+		tree.delete(95);
+		System.out.println("Aftering deleting 13 and 95");
+		tree.inorder(tree.parent);
+		tree.delete(92);
+		tree.delete(70);
+		System.out.println();
+		System.out.println("After deletin 92 and 83");
+		tree.inorder(tree.parent);
+		tree.insert(50);
+		tree.insert(25);
+		tree.insert(75);
+		tree.insert(12);
+		tree.insert(37);
+		tree.insert(87);
+		tree.insert(30);
+		tree.insert(43);
+		tree.insert(93);
+		tree.insert(33);
+		tree.insert(97);
+		tree.display();
+		tree.inorder(tree.parent);
+		System.out.println("deleting 75");
+//		tree.delete(75);
+		tree.inorder(tree.parent);
+		tree.display();*/
+		tree.insert(63);
+		tree.insert(27);
+		tree.insert(80);
+		tree.insert(13);
+		tree.insert(51);
+		tree.insert(70);
+		tree.insert(92);
+		tree.insert(8);
+		tree.insert(9);
+		tree.insert(95);
+		tree.insert(91);
+		tree.insert(83);
+		tree.insert(65);
+		tree.insert(68);
+		tree.insert(45);
+		tree.insert(43);
+		tree.insert(42);
+		tree.insert(69);
+		tree.display();
+		tree.inorder(tree.parent);
+		System.out.println(" leftView ");
+		tree.leftView();
+		tree.leftNRightView();
+		
+	}
+}

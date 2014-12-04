@@ -1,0 +1,1 @@
+Given a mathematical expression, find and remove the redundant brackets from the expression.
