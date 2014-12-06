@@ -1,7 +1,7 @@
 ##  Algorithms and DataStructures
 
 
-1. [Arrays]()
+1. [Arrays](https://github.com/shashi45/DataStructorsAndAlgorithms/tree/master/DSAndAlgos/Arrays.md)
 2. [Link]()
 3. [Stack]()
 4. [Queue]()
