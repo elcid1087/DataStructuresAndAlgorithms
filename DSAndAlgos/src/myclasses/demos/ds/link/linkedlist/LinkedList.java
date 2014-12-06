@@ -125,7 +125,9 @@ public class LinkedList {
 	 *            the size
 	 */
 	public void removeDuplicates(int size) {
-		Link uniqueList = null;
+		System.out.println("Inside removeDuplicates");
+		Link uniqueList = null;//Unique list is the new list which will have unique list of elements, instead of unique list 
+		//we can just remove the duplicate elements from the original list itself.
 		int[] hashTable = new int[size];
 		Link current = first;
 		while (current != null) {
