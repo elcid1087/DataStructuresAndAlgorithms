@@ -2,7 +2,6 @@
 
 
 1. [Arrays]()
-
 2. [Link]()
 3. [Stack]()
 4. [Queue]()
