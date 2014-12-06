@@ -3,7 +3,7 @@
 
 1. [Arrays](https://github.com/shashi45/DataStructorsAndAlgorithms/tree/master/DSAndAlgos/Arrays.md)
 2. [Link](https://github.com/shashi45/DataStructorsAndAlgorithms/tree/master/DSAndAlgos/Link.md)
-3. [Stack]()
+3. [Stack](https://github.com/shashi45/DataStructorsAndAlgorithms/tree/master/DSAndAlgos/Stack.md)
 4. [Queue]()
 5. [Recursion]()
 6. [Hash Table]()
